@@ -16,30 +16,44 @@
       background: radial-gradient(circle, #2b5876, #4e4376);
       overflow: hidden;
     }
+
     .tree-container {
       text-align: center;
     }
+
     .tree-container img {
       width: 300px;
       height: auto;
     }
+
     .audio-control {
       margin-top: 20px;
       color: #fff;
       font-family: Arial, sans-serif;
       text-align: center;
     }
+
     .audio-control button {
-      background-color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
+      background-color: #28a745; /* Зеленый цвет */
+      color: white;
+      border: 2px solid #28a745;
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: bold;
       cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      border-radius: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, box-shadow 0.3s;
     }
+
     .audio-control button:hover {
-      background-color: #ddd;
+      background-color: #218838;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .audio-control button:active {
+      background-color: #1e7e34;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -61,10 +75,10 @@
   playButton.addEventListener('click', () => {
     if (audio.paused) {
       audio.play();
-      playButton.textContent = '⏸️ Остановить песню';
+      playButton.textContent = 'Остановить песню';
     } else {
       audio.pause();
-      playButton.textContent = '▶️ Включить песню';
+      playButton.textContent = 'Включить песню';
     }
   });
 </script>
